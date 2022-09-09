@@ -1,0 +1,18 @@
+use std::io::stdin;
+
+
+fn main() {
+    println!("Ingrese una secuencia de ADN: ");
+    let mut adn: String = String::new;
+    stdin().read_line(&mut adn).unwrap() ;
+
+fn rna(){;
+    adn.map().match(); 
+    'G' == 'C'
+    'C' == 'G'
+    'T' == 'A'
+    'A' == 'U'
+}
+
+}
+println!("La secuencia transformada a ARN es:", rna)
