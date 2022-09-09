@@ -4,7 +4,7 @@ fn is_isbn10() -> bool{
     println!("Ingrese un numero: ");
     let mut isbn : String = String::new();
     stdin().read_line(&mut isbn).unwrap();
-    // crear y comentar esta función
+    // ingresar el isbn de 10 caracteres
 
     return true
 }
@@ -12,7 +12,7 @@ fn is_isbn10() -> bool{
 
 fn is_isbn_format_valid(c: &str) -> bool {
 
-    // comentar esta funcion
+    // validar que lo ingresado sea correcto
     if c.chars().next().unwrap().is_numeric() {
         return true;
     } else if c == "X" || c == "x"{
@@ -27,7 +27,6 @@ fn main(){
     let mut clean_isbn: String = String::new();
     stdin().read_line(&mut isbn).unwrap();
    
-    // comentar este ciclo
     for c in isbn.to_string().trim().chars(){
         if is_isbn_format_valid(&c.to_string()){
             clean_isbn = clean_isbn + &c.to_string(); 
@@ -35,11 +34,11 @@ fn main(){
     }
 
     println!("{}", clean_isbn);
-    // comentar esta sentencia
+    // devuelve el isbn sin los guiones
     if is_isbn10(clean_isbn){
         println!("{} es un ISBN10 valido", clean_isbn);
     } else {
-        println!("No lo es");
+        println!("{} no es un ISBN10 valido", clean_isbn);
     }
 
 }
